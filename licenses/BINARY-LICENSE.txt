@@ -1,0 +1,23 @@
+HID Access Control - Driver Evaluation Terms
+
+The prebuilt kernel driver and its resident demonstration clock are proprietary
+binaries and are not covered by the repository's MIT source license. Evaluation
+use is permitted on systems you own or are authorized to administer, subject to
+the supplied product's documented scope and demonstration limits.
+
+The demonstration permits one hour of active-policy availability per Windows
+kernel boot, starting with the first successful policy activation. Closing the
+application or stopping a policy does not reset the clock. At expiry policies
+are disabled and new device access is passed through normally. Windows Restart
+starts another demonstration period. A private commercial agreement is required
+for unrestricted production/OEM distribution and use outside these evaluation
+terms. Contact Discord username titancsa for pricing and availability.
+
+No private keys, production entitlement or kernel source are included. A test-
+signed development package is not a production release. Use a Microsoft-signed
+package for normal Windows installation without developer test settings.
+
+The binaries are provided AS IS, without warranties, to the extent permitted
+by applicable law. No guarantee of security isolation, prevention of bypass,
+universal compatibility or absence of defects is made. Existing rights that
+cannot legally be excluded remain unaffected.
