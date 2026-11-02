@@ -1,0 +1,54 @@
+[Version]
+Signature="$Windows NT$"
+Class=System
+ClassGUID={4D36E97D-E325-11CE-BFC1-08002BE10318}
+Provider=%Provider%
+CatalogFile=TitanHidAccess.cat
+DriverVer=11/02/2026,0.1.0.0
+PnpLockdown=1
+
+[Manufacturer]
+%Provider%=Models,NTamd64.10.0...19041
+[Models.NTamd64.10.0...19041]
+%Device%=HidAccessInstall,ROOT\TITANHIDACCESS
+[SourceDisksNames]
+1=%Disk%
+[SourceDisksFiles]
+TitanHidAccess.sys=1
+TitanHidAccessClock.sys=1
+[DestinationDirs]
+DriverFiles=13
+[DriverFiles]
+TitanHidAccess.sys
+TitanHidAccessClock.sys
+[HidAccessInstall.NT]
+CopyFiles=DriverFiles
+[HidAccessInstall.NT.HW]
+AddReg=DeviceSecurity
+[DeviceSecurity]
+HKR,,Security,0,"D:P(A;;GA;;;SY)(A;;GA;;;BA)"
+HKR,,DeviceCharacteristics,0x00010001,0x00000100
+[HidAccessInstall.NT.Services]
+AddService=TitanHidAccess,0x00000002,HidAccessService
+AddService=TitanHidAccessClock,0,ClockService
+[HidAccessService]
+DisplayName=%Device%
+ServiceType=1
+StartType=3
+ErrorControl=1
+ServiceBinary=%13%\TitanHidAccess.sys
+[ClockService]
+DisplayName=%Clock%
+ServiceType=1
+StartType=3
+ErrorControl=1
+ServiceBinary=%13%\TitanHidAccessClock.sys
+[HidAccessInstall.NT.Wdf]
+KmdfService=TitanHidAccess,HidAccessWdf
+[HidAccessWdf]
+KmdfLibraryVersion=1.31
+[Strings]
+Provider="Titanfyre"
+Device="Titan HID Access Control"
+Clock="Titan HID Access Demo Clock"
+Disk="Titan HID Access Control installation media"

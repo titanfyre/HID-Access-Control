@@ -6,9 +6,9 @@ Choose which applications can open compatible controllers, with per-device rules
 > **Full driver version without demo restrictions: Discord `titancsa`.**
 > Open Discord, choose **Friends > Add Friend**, enter **`titancsa`**, then message me with **HID Access Control** for commercial availability, pricing and license instructions.
 
-**[Download the evaluation tools](https://github.com/titanfyre/HID-Access-Control/releases/latest)** | [SDK](SDK/README.md) | [Example](Examples/access.cpp) | [Installation](docs/INSTALLATION.md) | [Validation](docs/VALIDATION.md)
+**[Download the signed demo](https://github.com/titanfyre/HID-Access-Control/releases/latest)** | [SDK](SDK/README.md) | [Example](Examples/access.cpp) | [Installation](docs/INSTALLATION.md) | [Validation](docs/VALIDATION.md)
 
-> **Microsoft signing is pending for this initial evaluation.** The public tools can run the labelled offline preview. The installable production package will be integrated after Microsoft returns the signed driver. The supplied setup refuses a missing, unsigned or unrelated package; changing Windows developer security settings is not part of normal installation.
+> **Microsoft-signed driver included.** The self-contained UI and console installers embed the matching filter and boot-clock package. Administrator rights and a Windows restart may be required. Test mode is not required. Setup verifies catalog trust and package membership before installation.
 
 ![Native interface in labelled offline preview mode](docs/app.png)
 
@@ -27,14 +27,14 @@ The first version targets **Windows 10 2004+ / Windows 11 x64**. HID gamepad/joy
 
 ## Use the interface
 
-1. Extract the complete release ZIP. For an offline tour, run `HidAccessApp.exe --preview`.
-2. Once a Microsoft-signed package is supplied, run `HidAccessSetup.exe` and choose **Install / reinstall**. Use Windows **Restart** when requested, so Windows rebuilds existing device stacks.
+1. Download and extract the complete release ZIP, or download a standalone setup EXE from the same release.
+2. Run `HidAccessSetup.exe` and choose **Install / reinstall**. Use Windows **Restart** when requested, so Windows rebuilds existing device stacks.
 3. Open `HidAccessApp.exe` as administrator. Refresh the device list and select the controller collection you want to manage.
 4. Choose its access mode and add the executable files concerned. For example, allow your remapper's EXE for the physical controller and let games open the separate virtual controller.
 5. Start the session. Changes to an active policy take effect for subsequent device opens. Close and reopen the receiving program if it already owns a handle.
 6. Use **Stop** to restore access. Closing the UI also clears its session policy. Use **Copy report** to inspect installation, devices and access decisions.
 
-The UI is an example of the same public SDK; there is no separate application-only hiding mechanism. One application owns configuration at a time. An access denial in the log identifies this filter's decision; an allowed open may still fail later in another driver or in the receiving application.
+The UI is an example of the same public SDK; there is no separate application-only hiding mechanism. One application owns configuration at a time. An access denial in the log identifies this filter's decision; an allowed open may still fail later in another driver or in the receiving application. `HidAccessApp.exe --preview` provides a labelled synthetic tour without opening a driver session.
 
 ## Minimal C++ integration
 
@@ -78,23 +78,23 @@ Choose the intended device explicitly in a real application; the short example u
 
 The demo allows **one hour per Windows kernel boot**, starting with the first successful active policy. Time continues while hiding is stopped or the application is closed. At expiry policies are disabled and subsequent device opens pass through. Use Windows **Restart** for a new allowance; closing, reinstalling and reopening applications does not renew it.
 
-The production driver package contains the access filter and a small resident boot-clock driver, `TitanHidAccess.sys` and `TitanHidAccessClock.sys`; these await Microsoft signing and are absent from the initial public tools ZIP. The clock is started on first activation and stays resident until restart. No user-mode background service or online account is needed for this demo. [Setup and clean removal](docs/INSTALLATION.md).
+The Microsoft-signed driver package contains the access filter and a small resident boot-clock driver, `TitanHidAccess.sys` and `TitanHidAccessClock.sys`. The clock is started on first activation and stays resident until restart. No user-mode background service or online account is needed for this demo. [Setup and clean removal](docs/INSTALLATION.md).
 
 ## Build and source
 
-Run `./Build.ps1 -Test` with Visual Studio 2022 C++ tools, CMake and a Windows SDK. `-Asan -Test` enables user-mode memory checks. `-DriverPackageDirectory` accepts a matching opaque signed package for installer embedding; runtime setup still verifies its trust and catalog membership. Building never installs a driver or enables a live policy automatically.
+Run `./Build.ps1 -Test` with Visual Studio 2022 C++ tools, CMake and a Windows SDK. It embeds the supplied signed binaries from `Installer/Driver` into both setup EXEs. `-Asan -Test` enables user-mode memory checks. `-DriverPackageDirectory` selects another matching opaque signed package; runtime setup still verifies its trust and catalog membership. Building never installs a driver or enables a live policy automatically.
 
 ```text
 App/          Native UI example and labelled offline preview
 SDK/          HidAccess.h + HidAccess.cpp and API notes
 Protocol/     Bounded public wire ABI
 Examples/     Small independent C++ example
-Installer/    Self-contained UI and console setup source
+Installer/    UI/console setup source and opaque signed driver package
 Tests/        Offline protocol and bounds validation
 docs/         Installation, validation and interface image
 licenses/     Separate driver evaluation terms
 ```
 
-The public user-mode source is [MIT licensed](LICENSE); **kernel implementation source is private**. This independent project addresses the input-device access-control use case popularized by [Nefarius HidHide](https://github.com/nefarius/HidHide), with its own SDK, session ownership and per-device policy model. It is not affiliated with Nefarius and does not implement HidHide's binary/API contract. Live behavior and compatibility are documented in [validation](docs/VALIDATION.md).
+The public user-mode source is [MIT licensed](LICENSE); **kernel implementation source is private**. The opaque signed driver files have [separate demo terms](licenses/BINARY-LICENSE.txt). This independent project addresses the input-device access-control use case popularized by [Nefarius HidHide](https://github.com/nefarius/HidHide), with its own SDK, session ownership and per-device policy model. It is not affiliated with Nefarius and does not implement HidHide's binary/API contract. Live behavior and compatibility are documented in [validation](docs/VALIDATION.md).
 
 Use only on systems you own or are authorized to administer. The software is supplied as-is under its applicable license. Users remain responsible for lawful use and applicable third-party rules; no guarantee of universal compatibility, security isolation or absence of defects is made.

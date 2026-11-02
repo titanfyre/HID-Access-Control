@@ -38,7 +38,7 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/Tests/Protocol.cpp")
     add_test(NAME OfflineProtocolValidation COMMAND HidAccessTests)
 endif()
 
-set(DRIVER_PACKAGE_DIRECTORY "" CACHE PATH "Opaque Microsoft-signed HID Access Control package")
+set(DRIVER_PACKAGE_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/Installer/Driver" CACHE PATH "Opaque Microsoft-signed HID Access Control package")
 set(PACKAGE_RESOURCE "")
 if(DRIVER_PACKAGE_DIRECTORY)
     enable_language(RC)

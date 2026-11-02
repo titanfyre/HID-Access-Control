@@ -4,3 +4,6 @@
 *.md text eol=lf
 *.ps1 text eol=crlf
 *.png binary
+*.sys binary
+*.cat binary
+*.inf -text

@@ -14,5 +14,7 @@
 *.cer
 *.exe
 *.dll
+!Installer/Driver/*.sys
+!Installer/Driver/*.cat
 *.user
 .vs/

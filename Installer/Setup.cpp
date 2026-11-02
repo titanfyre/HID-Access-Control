@@ -174,7 +174,7 @@ Setup::Result Install(){
     if(!Setup::PayloadAvailable())return {ERROR_FILE_NOT_FOUND,false,L"No signed driver package is embedded in this build. Import the Microsoft-signed INF/CAT and both SYS files, then rebuild the self-contained installers. Nothing was installed."};
     Temporary temp;temp.Create();
     if(!OwnPackage(temp.directory/L"TitanHidAccess.inf"))return {ERROR_INVALID_DATA,false,L"Installation refused: the embedded package does not match the exact HID Access Control identity."};
-    if(!MicrosoftCatalog(temp.directory/L"TitanHidAccess.cat"))return {ERROR_INVALID_IMAGE_HASH,false,L"Installation refused: the embedded driver catalog must have a trusted Microsoft Windows Hardware Compatibility Publisher signature. This preview has not completed Microsoft signing."};
+    if(!MicrosoftCatalog(temp.directory/L"TitanHidAccess.cat"))return {ERROR_INVALID_IMAGE_HASH,false,L"Installation refused: the embedded driver catalog must have a trusted Microsoft Windows Hardware Compatibility Publisher signature. Use the complete, unmodified Microsoft-signed release bundle."};
     if(!CatalogMember(temp.directory,L"TitanHidAccess.inf")||!CatalogMember(temp.directory,L"TitanHidAccess.sys")||!CatalogMember(temp.directory,L"TitanHidAccessClock.sys"))return {ERROR_INVALID_IMAGE_HASH,false,L"Installation refused: the embedded INF or SYS is not a trusted member of its catalog."};
     DWORD reset=ResetSession();if(reset)return {reset,false,L"Close HID Access Control and all SDK sessions before reinstalling. "+Message(reset)};
     Devices devices;devices.h=SetupDiGetClassDevsW(&GUID_DEVCLASS_SYSTEM,nullptr,nullptr,0);Require(devices.h!=INVALID_HANDLE_VALUE);

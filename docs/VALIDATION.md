@@ -1,6 +1,6 @@
 # Validation and compatibility boundary
 
-This page records exercised behavior rather than claiming universal HidHide parity. The initial public package is an evaluation with Microsoft signing pending. Windows 10 2004+ / Windows 11 x64 is the intended target; live checks are performed in an owned disposable Windows 11 VM. Other physical hardware, Windows versions and device stacks require qualification.
+This page records exercised behavior rather than claiming universal HidHide parity. The release includes the Microsoft-signed one-hour evaluation driver. Windows 10 2004+ / Windows 11 x64 is the intended target; live checks are performed in an owned disposable Windows 11 VM. Other physical hardware, Windows versions and device stacks require qualification.
 
 ## Offline checks
 
@@ -14,9 +14,13 @@ This page records exercised behavior rather than claiming universal HidHide pari
 
 The private build runs compiler/PREfast analysis, Windows and universal INF verification and catalog generation. The submission CAB contains its package beneath a short directory, with no loose files at the CAB root, and is extracted again to check hashes. A laboratory duration override is build-only, private and excluded from the production one-hour CAB.
 
+The Microsoft return for driver version **0.1.0.0** has valid Microsoft Windows Hardware Compatibility Publisher signatures on the catalog and both SYS files. Windows kernel-policy signature verification confirms that the catalog covers the INF and both SYS files. The returned INF is unchanged, and every executable/data section in both returned SYS files matches the production code tested before submission.
+
 ## Live checks
 
 The lab used owned virtual HID controller, keyboard and mouse fixtures supplied by an existing Microsoft-signed Vdevice driver, in Windows 11 build 26200. The final production driver code, privately test-signed for that guest, passed a normal reboot and the access suite with **Driver Verifier standard checks enabled for both product SYS files**.
+
+The returned Microsoft-signed package was then installed using the release's self-contained console setup with **Secure Boot enabled, test signing disabled and code-integrity enforcement active**. After the requested Windows restart, the driver was running and the eight-case functional suite passed again. These tests used owned virtual fixtures and did not send input reports to physical devices.
 
 | Check | Result |
 | --- | --- |
@@ -31,10 +35,12 @@ The lab used owned virtual HID controller, keyboard and mouse fixtures supplied 
 | Control endpoint | Eight elevated/restricted-token direct/suffix/zero-access cases passed |
 | Installer trust refusal | Missing payload rejected with error 2; a locally trusted laboratory-signed catalog was rejected with error 577 |
 | Native interface | Synthetic self-test, compact three-row layout and screenshot generation passed |
+| Microsoft-signed return | Signature/catalog membership checks, embedded-payload install and the eight functional cases passed with normal signing enforcement and Secure Boot |
+| Signed-package removal | Uninstall returned the restart request; after restart, a repeat removal reported not installed, with no product services, root nodes or class-filter registrations remaining |
 
 The first Verifier boot caught an invalid KMDF send-and-forget use for create requests with framework file objects. The filter now uses a proper completion routine and propagates the lower driver's status/information. The final corrected driver then passed the Verifier boot and functional suite above. This evidence does not establish absence of all defects.
 
-The Microsoft-signed production return must still be installed and exercised with ordinary Windows security settings after signing. Test-mode validation does not certify that final return. A real one-hour wall-clock expiry and physical XUSB/GIP controllers have not been exhaustively exercised in this initial validation.
+A real one-hour wall-clock expiry and physical XUSB/GIP controllers have not been exhaustively exercised in this initial validation. The Microsoft signature establishes package trust; it is not a claim of universal hardware compatibility or complete Windows Hardware Lab Kit qualification.
 
 ## Important boundaries
 

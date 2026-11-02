@@ -6,6 +6,7 @@ param(
 )
 $ErrorActionPreference='Stop'
 if(![Environment]::Is64BitProcess){throw 'Use Windows PowerShell x64.'}
+if(!$DriverPackageDirectory){$DriverPackageDirectory=Join-Path $PSScriptRoot 'Installer\Driver'}
 if(!$BuildDirectory){$BuildDirectory=Join-Path $PSScriptRoot $(if($Asan){'obj\Asan'}else{'obj\Build'})}
 $arguments=@('-S',$PSScriptRoot,'-B',[IO.Path]::GetFullPath($BuildDirectory),'-G','Visual Studio 17 2022','-A','x64',('-DHIDACCESS_ASAN='+$(if($Asan){'ON'}else{'OFF'})))
 if($DriverPackageDirectory){$arguments+=('-DDRIVER_PACKAGE_DIRECTORY='+[IO.Path]::GetFullPath($DriverPackageDirectory))}

@@ -2,11 +2,11 @@
 
 Windows 10 2004+ / Windows 11 x64 is the target. Installation and live configuration require administrator rights. Windows kernel filter association changes take effect when device stacks are rebuilt; use Windows Restart when setup requests it.
 
-## Initial signing-pending evaluation
+## Complete release bundle
 
-The initial public release contains the UI, SDK, examples and setup source/executables. The new driver is awaiting Microsoft signing. Run `HidAccessApp.exe --preview` for the labelled offline interface. A setup without the verified production payload refuses installation before modifying the system. Private test-signed VM packages are not distributed as normal releases.
+The release ZIP contains the application, example, both setup EXEs, public C++ sources and the Microsoft-signed driver package. Each setup EXE embeds the complete package and can install it on its own. No separate driver download, test mode or developer certificate is needed. The driver implementation source remains private.
 
-After the signed return is integrated, the same self-contained setup EXEs install the matching package. Keep the app, SDK and driver from the same product release.
+Keep the app, SDK and driver from the same product release. `HidAccessApp.exe --preview` is an optional labelled synthetic interface; it does not test physical-device compatibility or enable a driver session.
 
 ## Normal installation
 
@@ -34,7 +34,7 @@ The UI has session-scoped policies. Closing its owner clears those rules even if
 
 ## Troubleshooting
 
-- **Driver missing:** install this product's matching Microsoft-signed bundle after it is available; a HidHide or Interceptor installation uses a different interface.
+- **Driver missing:** install this product's matching Microsoft-signed bundle; a HidHide or Interceptor installation uses a different interface.
 - **Access denied opening configuration:** use an administrator process.
 - **Configuration in use:** close the other UI/SDK session; one owner controls the filter at a time.
 - **Device is protected:** system keyboard/mouse paths, transport parents and unclassified HID nodes cannot be selected. Choose a supported controller collection.
