@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <title>HID Access Control</title>
+  <rect width="256" height="256" rx="52" fill="#102034"/>
+  <path d="M79 86h98c20 0 31 15 36 37l11 49c4 20-17 32-30 18l-23-25H85l-23 25c-13 14-34 2-30-18l11-49c5-22 16-37 36-37Z" fill="#e7f0fb"/>
+  <path d="M76 111v32m-16-16h32" stroke="#102034" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="177" cy="116" r="7" fill="#102034"/>
+  <circle cx="194" cy="137" r="7" fill="#102034"/>
+  <rect x="98" y="38" width="60" height="55" rx="14" fill="#45d0aa" stroke="#102034" stroke-width="7"/>
+  <path d="M116 40V30a12 12 0 0 1 24 0v10" fill="none" stroke="#45d0aa" stroke-width="9"/>
+  <circle cx="128" cy="62" r="6" fill="#102034"/>
+  <path d="M128 66v10" stroke="#102034" stroke-width="6" stroke-linecap="round"/>
+</svg>
