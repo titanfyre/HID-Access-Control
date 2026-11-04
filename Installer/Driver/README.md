@@ -1,7 +1,6 @@
 # Microsoft-signed driver package
 
-These opaque evaluation binaries are driver version **0.1.0.0**. The kernel
-implementation source is private. The [binary demo terms](../../licenses/BINARY-LICENSE.txt)
+These opaque evaluation binaries are driver version **0.1.0.0**. Evaluation driver source is documented in [driver/README.md](../../driver/README.md). The [binary demo terms](../../licenses/BINARY-LICENSE.txt)
 apply separately from the public user-mode source license.
 
 `Build.ps1` and CMake embed this matching INF, CAT and both SYS files into each

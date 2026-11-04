@@ -82,6 +82,12 @@ The Microsoft-signed driver package contains the access filter and a small resid
 
 ## Build and source
 
+Demo/evaluation driver source is available; see [driver/README.md](driver/README.md) for
+build instructions and separate evaluation-source terms. Those terms apply to
+Titan-authored driver code. Third-party source licenses and existing application/SDK
+licenses remain applicable. Full/commercial implementation and private signing or
+activation material are excluded.
+
 Run `./Build.ps1 -Test` with Visual Studio 2022 C++ tools, CMake and a Windows SDK. It embeds the supplied signed binaries from `Installer/Driver` into both setup EXEs. `-Asan -Test` enables user-mode memory checks. `-DriverPackageDirectory` selects another matching opaque signed package; runtime setup still verifies its trust and catalog membership. Building never installs a driver or enables a live policy automatically.
 
 ```text
@@ -95,6 +101,6 @@ docs/         Installation, validation and interface image
 licenses/     Separate driver evaluation terms
 ```
 
-The public user-mode source is [MIT licensed](LICENSE); **kernel implementation source is private**. The opaque signed driver files have [separate demo terms](licenses/BINARY-LICENSE.txt). This independent project addresses the input-device access-control use case popularized by [Nefarius HidHide](https://github.com/nefarius/HidHide), with its own SDK, session ownership and per-device policy model. It is not affiliated with Nefarius and does not implement HidHide's binary/API contract. Live behavior and compatibility are documented in [validation](docs/VALIDATION.md).
+The public user-mode source is [MIT licensed](LICENSE); **Demo/evaluation driver source is documented in [driver/README.md](driver/README.md)**. The opaque signed driver files have [separate demo terms](licenses/BINARY-LICENSE.txt). This independent project addresses the input-device access-control use case popularized by [Nefarius HidHide](https://github.com/nefarius/HidHide), with its own SDK, session ownership and per-device policy model. It is not affiliated with Nefarius and does not implement HidHide's binary/API contract. Live behavior and compatibility are documented in [validation](docs/VALIDATION.md).
 
 Use only on systems you own or are authorized to administer. The software is supplied as-is under its applicable license. Users remain responsible for lawful use and applicable third-party rules; no guarantee of universal compatibility, security isolation or absence of defects is made.

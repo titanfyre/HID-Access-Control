@@ -1,6 +1,5 @@
 The MIT source license applies to this repository's original user-mode SDK,
-application, examples, protocol and installer source. The private kernel
-implementation is not published and has separate binary evaluation terms.
+application, examples, protocol and installer source. Evaluation driver source is documented in [driver/README.md](driver/README.md) with its own source-license scope. Prebuilt driver binaries retain their separate evaluation terms.
 
 This independent project addresses the device access-control use case described
 by HidHide (https://github.com/nefarius/HidHide). It is not affiliated with,

@@ -13,7 +13,7 @@ starts another demonstration period. A private commercial agreement is required
 for unrestricted production/OEM distribution and use outside these evaluation
 terms. Contact Discord username titancsa for pricing and availability.
 
-No private keys, production entitlement or kernel source are included. A test-
+No private keys, production entitlement or full/commercial kernel implementation are included. Demo/evaluation driver source has separate scope and license notes in [driver/README.md](../driver/README.md). A test-
 signed development package is not a production release. Use a Microsoft-signed
 package for normal Windows installation without developer test settings.
 
