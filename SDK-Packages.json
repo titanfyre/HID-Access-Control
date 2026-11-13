@@ -203,7 +203,7 @@
       "api_prefix": "hid_access_control_json_"
     },
     "JavaScript/npm": {
-      "status": "awaiting_browser_publication_authentication",
+      "status": "registry_publication_requires_action",
       "name": "hid-access-control",
       "version": "1.0.0",
       "directory": "HID-Access-Control-JavaScript-npm",
