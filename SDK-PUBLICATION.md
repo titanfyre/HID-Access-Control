@@ -1,26 +1,85 @@
-# SDK publication status
+# HID-Access-Control — SDK et installation
 
-Current source layout and registry coverage. A GitHub download is distinct from publication on a central registry.
+Projet : [HID-Access-Control](https://github.com/titanfyre/HID-Access-Control). [Sources et documentation des SDK](https://github.com/TitanCSA/sdk-packages/tree/main/projects/HID-Access-Control).
 
-| Target | Status | Package / documentation |
+Choisis la ligne correspondant au langage de ton application. Installe son outil habituel (Node.js/npm, Python/pip, .NET, etc.), puis execute la commande dans le dossier de ton application. Les pilotes et applications requis restent a installer separement selon le README du projet.
+
+Les SDK natifs sont destines a Windows x64. Java utilise Java22+ (Kotlin passe par le SDK Java). Flutter utilise le SDK Dart ; le chargement de la DLL doit etre configure dans l application. AutoHotInterceptor .NET utilise .NET Framework4.8.
+
+| Langage / registre | Disponibilite | Installation / utilisation |
 | --- | --- | --- |
-| CPP/vcpkg | published_custom_registry | hid-access-control |
-| CPP/conan | published_custom_source_index | [hid-access-control](https://github.com/TitanCSA/sdk-packages/tree/089bc73095aa8eda89bacbe10d0b9e58394b0207/conan-index) [Source](packaging/native/) |
-| CPP/nuget | published_payload_verified | [HID-Access-Control.Native](https://www.nuget.org/packages/HID-Access-Control.Native/0.1.0) |
-| NET/nuget | published_payload_verified | [HIDAccessControl.SDK](https://www.nuget.org/packages/HIDAccessControl.SDK/1.0.0) |
-| Python/pypi | built_fixture_and_production_verified | hid-access-control [Source](HID-Access-Control-Python-pypi/) |
-| Python/conda-forge | custom_channel_install_verified_requires_conda_forge_review | [hid-access-control](https://raw.githubusercontent.com/TitanCSA/sdk-packages/089bc73095aa8eda89bacbe10d0b9e58394b0207/conda-channel) [Source](packaging/conda/) |
-| Rust/cargo | published_install_verified | [hid-access-control](https://crates.io/crates/hid-access-control) [Source](HID-Access-Control-Rust-cargo/) |
-| JavaScript/npm | stopped_before_submission | hid-access-control [Source](HID-Access-Control-JavaScript-npm/) |
-| Java/maven | published_install_verified | [hid-access-control](https://central.sonatype.com/artifact/io.github.titancsa/hid-access-control/1.0.0) [Source](HID-Access-Control-Java-maven/) |
-| Java/jitpack | published_install_verified | [hid-access-control](https://jitpack.io/#titanfyre/HID-Access-Control/java-sdk-v1.0.0) [Source](HID-Access-Control-Java-maven/) |
-| Go/modules | published_install_verified | [hid-access-control](https://pkg.go.dev/github.com/titanfyre/HID-Access-Control/HID-Access-Control-Go-modules@v1.0.0) [Source](HID-Access-Control-Go-modules/) |
-| Go/pkg-go-dev | indexed_verified | [Documentation](https://pkg.go.dev/github.com/titanfyre/HID-Access-Control/HID-Access-Control-Go-modules@v1.0.0) |
-| PowerShell/gallery | published_install_verified | [HIDAccessControl](https://www.powershellgallery.com/packages/HIDAccessControl/1.0.0) [Source](HID-Access-Control-PowerShell-gallery/) |
-| Dart/pub-dev | built_fixture_and_production_verified | hid_access_control [Source](HID-Access-Control-Dart-pub-dev/) |
-| Ruby/rubygems | published_install_verified | [hid-access-control](https://rubygems.org/gems/hid-access-control) [Source](HID-Access-Control-Ruby-rubygems/) |
-| PHP/packagist | composer_source_and_tag_published | [titancsa/hid-access-control](https://packagist.org/packages/titancsa/hid-access-control) |
+| C++ / vcpkg | Registre TitanCSA disponible (configuration ci-dessous) | `vcpkg install hid-access-control:x64-windows` |
+| C++ / Conan | Registre TitanCSA disponible (configuration ci-dessous) | `conan install --requires=hid-access-control/0.1.0 -r titancsa --build=missing -s compiler.cppstd=17` |
+| C++ / NuGet natif | Publie et verifie | `Install-Package HID-Access-Control.Native -Version 0.1.0` |
+| C# / .NET | Publie et verifie | `dotnet add package HIDAccessControl.SDK --version 1.0.0` |
+| Python / pip | Pas encore disponible / validation en cours | Commande prevue apres publication : `python -m pip install hid-access-control==1.0.0` |
+| Python / Conda | Canal TitanCSA disponible ; acceptation conda-forge encore en attente | `conda install --override-channels -c https://raw.githubusercontent.com/TitanCSA/sdk-packages/089bc73095aa8eda89bacbe10d0b9e58394b0207/conda-channel -c conda-forge hid-access-control` |
+| Rust / Cargo | Publie et verifie | `cargo add hid-access-control@1.0.0` |
+| JavaScript et TypeScript / npm | Pas encore disponible / validation en cours | Commande prevue apres publication : `npm install hid-access-control@1.0.0` |
+| Java et Kotlin / Maven Central | Publie et verifie | `io.github.titancsa:hid-access-control:1.0.0 (pom.xml / Gradle)` |
+| Java et Kotlin / JitPack | Publie et verifie | `com.github.titanfyre:HID-Access-Control:java-sdk-v1.0.0 (avec le depot JitPack)` |
+| Go / Go Modules | Publie et verifie | `go get github.com/titanfyre/HID-Access-Control/HID-Access-Control-Go-modules@v1.0.0` |
+| Go / pkg.go.dev | Publie et verifie | `Documentation : https://pkg.go.dev/github.com/titanfyre/HID-Access-Control/HID-Access-Control-Go-modules@v1.0.0` |
+| PowerShell / Gallery | Publie et verifie | `Install-Module HIDAccessControl -RequiredVersion 1.0.0 -Scope CurrentUser` |
+| Dart et Flutter / pub.dev | Pas encore disponible / validation en cours | Commande prevue apres publication : `dart pub add hid_access_control:1.0.0` |
+| Ruby / RubyGems | Publie et verifie | `gem install hid-access-control -v 1.0.0` |
+| PHP / Composer | Pas encore disponible / validation en cours | Commande prevue apres publication : `composer require titancsa/hid-access-control:1.0.0` |
 
-Native SDK source and CMake/Conan/vcpkg/NuGet recipes share [`packaging/native`](packaging/native/LAYOUT.md). Previous release archives and tags remain unchanged.
+## C et C++
 
-Application and driver prerequisites and original licensing remain those documented by each SDK. No driver installer is bundled with these source packages.
+Les sources et headers C / C++ sont dans le dossier central de ce projet. Les headers C se trouvent dans les dossiers `*-C-ffi` ou `*-C-json` (Interceptor-MultiLang : `native/`). Les paquets natifs C++ et la disponibilite du bridge C sont distincts ; consulte leur README avant de lier une application C.
+
+Pour vcpkg, ajoute un fichier `vcpkg-configuration.json` a cote de ton manifeste `vcpkg.json` :
+
+```json
+{
+  "registries": [
+    {
+      "kind": "git",
+      "repository": "https://github.com/TitanCSA/vcpkg-registry",
+      "baseline": "9a706cf6992544778eb26a8b4244e303292f1ce6",
+      "packages": [
+        "hid-access-control",
+        "hid-access-control-sdk"
+      ]
+    }
+  ]
+}
+```
+
+Pour Conan2, configure une seule fois l index source :
+
+```powershell
+git clone https://github.com/TitanCSA/sdk-packages.git
+conan remote add titancsa ./sdk-packages/conan-index -t local-recipes-index
+```
+
+Execute ensuite la commande Conan du tableau. Ce registre construit les bibliotheques depuis leurs sources ; il est distinct de ConanCenter. La commande NuGet native s execute dans la console du gestionnaire de packages de Visual Studio.
+
+## Java et Kotlin
+
+Dans le bloc `<dependencies>` de ton `pom.xml` :
+
+```xml
+<dependency>
+  <groupId>io.github.titancsa</groupId>
+  <artifactId>hid-access-control</artifactId>
+  <version>1.0.0</version>
+</dependency>
+```
+
+Avec Gradle Kotlin :
+
+```kotlin
+implementation("io.github.titancsa:hid-access-control:1.0.0")
+```
+
+Pour JitPack, ajoute aussi le depot `https://jitpack.io`, puis utilise les coordonnees du tableau. Les versions Go et JitPack deja publiees continuent de pointer vers leurs anciens tags immuables dans le depot du projet : ces tags restent disponibles. Leurs sources de travail sont maintenant centralisees ici ; aucun ancien import Go n est renomme.
+
+## Etat et documentation
+
+Les commandes marquees « prevues » ne sont pas encore des installations disponibles. Le canal Conda TitanCSA n est pas le catalogue officiel conda-forge. Les versions et licences existantes ne sont pas remplacees par cette reorganisation.
+
+Les guides API et exemples de chaque langage se trouvent dans leurs dossiers SDK, a cote des sources. Les bindings peuvent exposer une partie de l API C++ ; les limites restent documentees dans chaque SDK.
+
+[Retour au catalogue central](../../README.md)

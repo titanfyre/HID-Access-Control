@@ -1,3 +1,0 @@
-include README.md LICENSE
-recursive-include hid_access_control *.py *.dll
-recursive-include docs *
