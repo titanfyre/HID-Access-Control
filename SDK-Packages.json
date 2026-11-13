@@ -68,6 +68,14 @@
       "distribution": "Documented native SDK; registry receipt tracked independently"
     },
     {
+      "directory": "HID-Access-Control-JavaScript-npm",
+      "language": "JavaScript",
+      "registry": "npm",
+      "name": "hid-access-control",
+      "version": "1.0.0",
+      "distribution": "Documented native SDK; registry receipt tracked independently"
+    },
+    {
       "directory": "HID-Access-Control-NET-nuget",
       "language": "NET",
       "registry": "nuget",

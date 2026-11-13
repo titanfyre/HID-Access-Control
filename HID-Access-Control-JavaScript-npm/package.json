@@ -1,0 +1,33 @@
+{
+  "name": "hid-access-control",
+  "version": "1.0.0",
+  "description": "Direct Windows x64 HID-Access-Control JavaScript and TypeScript SDK",
+  "license": "MIT",
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "index.cjs",
+  "types": "index.d.ts",
+  "files": [
+    "index.cjs",
+    "index.d.ts",
+    "prebuilds/",
+    "docs/",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/titanfyre/HID-Access-Control.git",
+    "directory": "HID-Access-Control-JavaScript-npm"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
