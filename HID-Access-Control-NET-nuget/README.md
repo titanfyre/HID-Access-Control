@@ -1,8 +1,6 @@
 # HID-Access-Control .NET8 SDK
 
-Package ID `HIDAccessControl.SDK`. NuGet upload remains on hold at owner request.
-
-```csharp
+Package ID `HIDAccessControl.SDK`. ```csharp
 using var client=new TitanCSA.Products.HIDAccessControl.Client();
 string statusJson=client.Call("status", "{}");
 ```
