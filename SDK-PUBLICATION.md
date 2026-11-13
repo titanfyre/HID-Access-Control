@@ -6,7 +6,7 @@ Current source layout and registry coverage. A GitHub download is distinct from 
 | --- | --- | --- |
 | CPP/vcpkg | published_custom_registry | hid-access-control |
 | CPP/conan | published_custom_source_index | [hid-access-control](https://github.com/TitanCSA/sdk-packages/tree/089bc73095aa8eda89bacbe10d0b9e58394b0207/conan-index) [Source](packaging/native/) |
-| CPP/nuget | paused_pending_owner_email_confirmation | HID-Access-Control.Native |
+| CPP/nuget | account_email_confirmed_requires_matching_trusted_publishing_policy | HID-Access-Control.Native |
 | NET/nuget | built_verified_requires_trusted_publishing_policy | HIDAccessControl.SDK [Source](HID-Access-Control-NET-nuget/) |
 | Python/pypi | built_fixture_and_production_verified | hid-access-control [Source](HID-Access-Control-Python-pypi/) |
 | Python/conda-forge | custom_channel_install_verified_requires_conda_forge_review | [hid-access-control](https://raw.githubusercontent.com/TitanCSA/sdk-packages/089bc73095aa8eda89bacbe10d0b9e58394b0207/conda-channel) [Source](packaging/conda/) |
