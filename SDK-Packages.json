@@ -12,6 +12,76 @@
         ]
       },
       "distribution": "Shared native source; registry publication is reported separately below"
+    },
+    {
+      "directory": "HID-Access-Control-C-ffi",
+      "distribution": "Native C ABI adapter to the original project SDK",
+      "dll": "HIDAccessControlJsonSDK.dll",
+      "api_prefix": "hid_access_control_json_"
+    },
+    {
+      "directory": "HID-Access-Control-Python-pypi",
+      "language": "Python",
+      "registry": "pypi",
+      "name": "hid-access-control",
+      "version": "1.0.0",
+      "distribution": "Documented native SDK; registry receipt tracked independently"
+    },
+    {
+      "directory": "HID-Access-Control-Ruby-rubygems",
+      "language": "Ruby",
+      "registry": "rubygems",
+      "name": "hid-access-control",
+      "version": "1.0.0",
+      "distribution": "Documented native SDK; registry receipt tracked independently"
+    },
+    {
+      "directory": "HID-Access-Control-Go-modules",
+      "language": "Go",
+      "registry": "modules",
+      "name": "hid-access-control",
+      "version": "v1.0.0",
+      "distribution": "Documented native SDK; registry receipt tracked independently"
+    },
+    {
+      "directory": "HID-Access-Control-Rust-cargo",
+      "language": "Rust",
+      "registry": "cargo",
+      "name": "hid-access-control",
+      "version": "1.0.0",
+      "distribution": "Documented native SDK; registry receipt tracked independently"
+    },
+    {
+      "directory": "HID-Access-Control-Java-maven",
+      "language": "Java",
+      "registry": "maven",
+      "name": "hid-access-control",
+      "version": "1.0.0",
+      "distribution": "Documented native SDK; registry receipt tracked independently"
+    },
+    {
+      "directory": "HID-Access-Control-Dart-pub-dev",
+      "language": "Dart",
+      "registry": "pub-dev",
+      "name": "hid_access_control",
+      "version": "1.0.0",
+      "distribution": "Documented native SDK; registry receipt tracked independently"
+    },
+    {
+      "directory": "HID-Access-Control-NET-nuget",
+      "language": "NET",
+      "registry": "nuget",
+      "name": "HIDAccessControl.SDK",
+      "version": "1.0.0",
+      "distribution": "Documented native SDK; registry receipt tracked independently"
+    },
+    {
+      "directory": "HID-Access-Control-PowerShell-gallery",
+      "language": "PowerShell",
+      "registry": "gallery",
+      "name": "HIDAccessControl",
+      "version": "1.0.0",
+      "distribution": "Documented native SDK; registry receipt tracked independently"
     }
   ],
   "notes": "Registry accounts or community acceptance are separate. No missing language binding is represented as implemented.",

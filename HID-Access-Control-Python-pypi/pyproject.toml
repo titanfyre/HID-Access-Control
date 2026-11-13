@@ -1,0 +1,18 @@
+[build-system]
+requires=["setuptools>=77","wheel>=0.43"]
+build-backend="setuptools.build_meta"
+[project]
+name="hid-access-control"
+version="1.0.0"
+description="Windows x64 HID-Access-Control direct SDK"
+requires-python=">=3.10"
+license="MIT"
+readme="README.md"
+[project.urls]
+Repository="https://github.com/titanfyre/HID-Access-Control"
+[tool.setuptools]
+packages=["hid_access_control"]
+[tool.setuptools.package-data]
+hid_access_control=["*.dll"]
+[tool.setuptools.data-files]
+"share/hid-access-control/docs"=["docs/*","LICENSE"]
