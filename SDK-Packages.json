@@ -90,6 +90,12 @@
       "name": "HIDAccessControl",
       "version": "1.0.0",
       "distribution": "Documented native SDK; registry receipt tracked independently"
+    },
+    {
+      "directory": "packaging/conda",
+      "language": "Python",
+      "registry": "conda-forge",
+      "distribution": "Source-build recipe; official review and custom channel availability reported separately"
     }
   ],
   "notes": "Registry accounts or community acceptance are separate. No missing language binding is represented as implemented.",
@@ -101,7 +107,7 @@
     "CPP/vcpkg": {
       "status": "published_custom_registry",
       "registry": "https://github.com/TitanCSA/vcpkg-registry",
-      "baseline": "33fd43f72d7137f6ebaac4c1eeab001f66bf3a98",
+      "baseline": "9a706cf6992544778eb26a8b4244e303292f1ce6",
       "port": "hid-access-control",
       "microsoft_curated_registry": false,
       "legacy_port": "hid-access-control-sdk",
@@ -114,6 +120,8 @@
       "status": "public_recipe_builds_locally",
       "conan_center": false,
       "directory": "HID-Access-Control-CPP-conan",
+      "local_recipe_consumer_verified": true,
+      "minimum_cppstd": 17,
       "github_directory": "packaging/native"
     },
     "CPP/nuget": {
@@ -122,46 +130,179 @@
       "version": "0.1.0",
       "registry_published": false,
       "consumer_build_verified": true,
-      "documentation_bundled": true
+      "documentation_bundled": true,
+      "publication_on_hold_by_owner": true
     },
     "NET/nuget": {
-      "status": "binding_not_implemented"
+      "status": "built_verified_publication_on_hold_by_owner",
+      "name": "HIDAccessControl.SDK",
+      "version": "1.0.0",
+      "directory": "HID-Access-Control-NET-nuget",
+      "registry_published": false,
+      "documentation_bundled": true,
+      "url": null,
+      "public_consumer_verified": false,
+      "module": "hid_access_control",
+      "dll_name": "HIDAccessControlJsonSDK.dll",
+      "api_prefix": "hid_access_control_json_",
+      "publication_on_hold_by_owner": true
     },
     "Python/pypi": {
-      "status": "binding_not_implemented"
+      "status": "built_fixture_and_production_verified",
+      "name": "hid-access-control",
+      "version": "1.0.0",
+      "directory": "HID-Access-Control-Python-pypi",
+      "registry_published": false,
+      "documentation_bundled": true,
+      "url": null,
+      "public_consumer_verified": false,
+      "module": "hid_access_control",
+      "dll_name": "HIDAccessControlJsonSDK.dll",
+      "api_prefix": "hid_access_control_json_"
     },
     "Python/conda-forge": {
-      "status": "binding_not_implemented"
+      "status": "built_tested_requires_source_publication_and_official_review",
+      "name": "hid-access-control",
+      "version": "1.0.0",
+      "directory": "HID-Access-Control-Python-conda-forge",
+      "registry_published": false,
+      "documentation_bundled": true,
+      "url": null,
+      "public_consumer_verified": false,
+      "module": "hid_access_control",
+      "dll_name": "HIDAccessControlJsonSDK.dll",
+      "api_prefix": "hid_access_control_json_",
+      "recipe_format": "v1",
+      "v1_source_build_tests_passed": true,
+      "personal_maintainer_confirmation_required": true,
+      "official_review_status": "v1_recipe_prepared_requires_submission_or_existing_pr_update",
+      "github_directory": "packaging/conda"
     },
     "Rust/cargo": {
-      "status": "binding_not_implemented"
+      "status": "published_install_verified",
+      "name": "hid-access-control",
+      "version": "1.0.0",
+      "directory": "HID-Access-Control-Rust-cargo",
+      "registry_published": true,
+      "documentation_bundled": true,
+      "url": "https://crates.io/crates/hid-access-control",
+      "public_consumer_verified": true,
+      "module": "hid_access_control",
+      "dll_name": "HIDAccessControlJsonSDK.dll",
+      "api_prefix": "hid_access_control_json_"
     },
     "JavaScript/npm": {
-      "status": "binding_not_implemented"
+      "status": "awaiting_browser_publication_authentication",
+      "name": "hid-access-control",
+      "version": "1.0.0",
+      "directory": "HID-Access-Control-JavaScript-npm",
+      "registry_published": false,
+      "documentation_bundled": true,
+      "url": "https://www.npmjs.com/package/hid-access-control",
+      "public_consumer_verified": false,
+      "module": "hid_access_control",
+      "dll_name": "HIDAccessControlJsonSDK.dll",
+      "api_prefix": "hid_access_control_json_"
     },
     "Java/maven": {
-      "status": "binding_not_implemented"
+      "status": "published_install_verified",
+      "name": "hid-access-control",
+      "version": "1.0.0",
+      "directory": "HID-Access-Control-Java-maven",
+      "registry_published": true,
+      "documentation_bundled": true,
+      "url": "https://central.sonatype.com/artifact/io.github.titancsa/hid-access-control/1.0.0",
+      "public_consumer_verified": true,
+      "module": "hid_access_control",
+      "dll_name": "HIDAccessControlJsonSDK.dll",
+      "api_prefix": "hid_access_control_json_",
+      "coordinates": "io.github.titancsa:hid-access-control:1.0.0",
+      "java_package": "titancsa.products.hid_access_control"
     },
     "Java/jitpack": {
-      "status": "binding_not_implemented"
+      "status": "published_install_verified",
+      "name": "hid-access-control",
+      "version": "java-sdk-v1.0.0",
+      "directory": "HID-Access-Control-Java-maven",
+      "registry_published": true,
+      "documentation_bundled": true,
+      "url": "https://jitpack.io/#titanfyre/HID-Access-Control/java-sdk-v1.0.0",
+      "public_consumer_verified": true,
+      "module": "hid_access_control",
+      "dll_name": "HIDAccessControlJsonSDK.dll",
+      "api_prefix": "hid_access_control_json_",
+      "coordinates": "com.github.titanfyre:HID-Access-Control:java-sdk-v1.0.0",
+      "java_package": "titancsa.products.hid_access_control"
     },
     "Go/modules": {
-      "status": "binding_not_implemented"
+      "status": "published_install_verified",
+      "name": "hid-access-control",
+      "version": "v1.0.0",
+      "directory": "HID-Access-Control-Go-modules",
+      "registry_published": true,
+      "documentation_bundled": true,
+      "url": "https://pkg.go.dev/github.com/titanfyre/HID-Access-Control/HID-Access-Control-Go-modules@v1.0.0",
+      "public_consumer_verified": true,
+      "module": "github.com/titanfyre/HID-Access-Control/HID-Access-Control-Go-modules",
+      "dll_name": "HIDAccessControlJsonSDK.dll",
+      "api_prefix": "hid_access_control_json_"
     },
     "Go/pkg-go-dev": {
-      "status": "binding_not_implemented"
+      "status": "indexed_verified",
+      "url": "https://pkg.go.dev/github.com/titanfyre/HID-Access-Control/HID-Access-Control-Go-modules@v1.0.0"
     },
     "PowerShell/gallery": {
-      "status": "binding_not_implemented"
+      "status": "published_install_verified",
+      "name": "HIDAccessControl",
+      "version": "1.0.0",
+      "directory": "HID-Access-Control-PowerShell-gallery",
+      "registry_published": true,
+      "documentation_bundled": true,
+      "url": "https://www.powershellgallery.com/packages/HIDAccessControl/1.0.0",
+      "public_consumer_verified": true,
+      "module": "hid_access_control",
+      "dll_name": "HIDAccessControlJsonSDK.dll",
+      "api_prefix": "hid_access_control_json_"
     },
     "Dart/pub-dev": {
-      "status": "binding_not_implemented"
+      "status": "built_fixture_and_production_verified",
+      "name": "hid_access_control",
+      "version": "1.0.0",
+      "directory": "HID-Access-Control-Dart-pub-dev",
+      "registry_published": false,
+      "documentation_bundled": true,
+      "url": null,
+      "public_consumer_verified": false,
+      "module": "hid_access_control",
+      "dll_name": "HIDAccessControlJsonSDK.dll",
+      "api_prefix": "hid_access_control_json_"
     },
     "Ruby/rubygems": {
-      "status": "binding_not_implemented"
+      "status": "published_install_verified",
+      "name": "hid-access-control",
+      "version": "1.0.0",
+      "directory": "HID-Access-Control-Ruby-rubygems",
+      "registry_published": true,
+      "documentation_bundled": true,
+      "url": "https://rubygems.org/gems/hid-access-control",
+      "public_consumer_verified": true,
+      "module": "hid_access_control",
+      "dll_name": "HIDAccessControlJsonSDK.dll",
+      "api_prefix": "hid_access_control_json_"
     },
     "PHP/packagist": {
-      "status": "binding_not_implemented"
+      "status": "composer_source_and_tag_published",
+      "name": "titancsa/hid-access-control",
+      "version": "1.0.0",
+      "directory": "HID-Access-Control-PHP-packagist",
+      "registry_published": false,
+      "documentation_bundled": true,
+      "url": "https://packagist.org/packages/titancsa/hid-access-control",
+      "public_consumer_verified": false,
+      "module": "hid_access_control",
+      "dll_name": "HIDAccessControlJsonSDK.dll",
+      "api_prefix": "hid_access_control_json_",
+      "repository": "https://github.com/TitanCSA/hid-access-control-php"
     }
   },
   "coverage_note": "Missing language bindings are explicitly listed. Published GitHub archives are distinct from central registry acceptance. Local organized SDK folders are retained."
