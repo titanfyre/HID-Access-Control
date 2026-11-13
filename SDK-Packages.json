@@ -131,29 +131,28 @@
       "github_directory": "packaging/native"
     },
     "CPP/nuget": {
-      "status": "account_email_confirmed_requires_matching_trusted_publishing_policy",
+      "status": "published_payload_verified",
       "name": "HID-Access-Control.Native",
       "version": "0.1.0",
-      "registry_published": false,
-      "consumer_build_verified": true,
+      "url": "https://www.nuget.org/packages/HID-Access-Control.Native/0.1.0",
+      "public_payload_verified": true,
+      "public_consumer_verified": false,
+      "local_consumer_verified": true,
+      "registry_published": true,
       "documentation_bundled": true,
-      "publication_on_hold_by_owner": false,
-      "nuget_publication_status": "ready_requires_trusted_publishing_policy"
+      "publication_on_hold_by_owner": false
     },
     "NET/nuget": {
-      "status": "built_verified_requires_trusted_publishing_policy",
+      "status": "published_payload_verified",
       "name": "HIDAccessControl.SDK",
       "version": "1.0.0",
-      "directory": "HID-Access-Control-NET-nuget",
-      "registry_published": false,
-      "documentation_bundled": true,
-      "url": null,
+      "url": "https://www.nuget.org/packages/HIDAccessControl.SDK/1.0.0",
+      "public_payload_verified": true,
       "public_consumer_verified": false,
-      "module": "hid_access_control",
-      "dll_name": "HIDAccessControlJsonSDK.dll",
-      "api_prefix": "hid_access_control_json_",
-      "publication_on_hold_by_owner": false,
-      "nuget_publication_status": "ready_requires_trusted_publishing_policy"
+      "local_consumer_verified": true,
+      "registry_published": true,
+      "documentation_bundled": true,
+      "publication_on_hold_by_owner": false
     },
     "Python/pypi": {
       "status": "built_fixture_and_production_verified",
@@ -203,13 +202,13 @@
       "api_prefix": "hid_access_control_json_"
     },
     "JavaScript/npm": {
-      "status": "registry_publication_requires_action",
+      "status": "stopped_before_submission",
       "name": "hid-access-control",
       "version": "1.0.0",
       "directory": "HID-Access-Control-JavaScript-npm",
       "registry_published": false,
       "documentation_bundled": true,
-      "url": "https://www.npmjs.com/package/hid-access-control",
+      "url": null,
       "public_consumer_verified": false,
       "module": "hid_access_control",
       "dll_name": "HIDAccessControlJsonSDK.dll",
