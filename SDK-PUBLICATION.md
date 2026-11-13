@@ -6,24 +6,24 @@ Choisis le paquet a installer. Installe son outil habituel (Node.js/npm, Python/
 
 Les SDK natifs sont destines a Windows x64. Java utilise Java22+ (Kotlin passe par le SDK Java). Flutter utilise le SDK Dart ; le chargement de la DLL doit etre configure dans l application. AutoHotInterceptor .NET utilise .NET Framework4.8.
 
-| Paquet | Registre | Disponibilite | Installation / utilisation |
-| --- | --- | --- | --- |
-| `hid-access-control` | vcpkg | Registre TitanCSA disponible (configuration ci-dessous) | `vcpkg install hid-access-control:x64-windows` |
-| `hid-access-control` | Conan | Registre TitanCSA disponible (configuration ci-dessous) | `conan install --requires=hid-access-control/0.1.0 -r titancsa --build=missing -s compiler.cppstd=17` |
-| `HID-Access-Control.Native` | NuGet | Publie et verifie | `Install-Package HID-Access-Control.Native -Version 0.1.0` |
-| `HIDAccessControl.SDK` | NuGet | Publie et verifie | `dotnet add package HIDAccessControl.SDK --version 1.0.0` |
-| `hid_access_control` | PyPI | Pas encore disponible / validation en cours | Commande prevue apres publication : `python -m pip install hid-access-control==1.0.0` |
-| `hid-access-control` | Conda | Canal TitanCSA disponible ; acceptation conda-forge encore en attente | `conda install --override-channels -c https://raw.githubusercontent.com/TitanCSA/sdk-packages/089bc73095aa8eda89bacbe10d0b9e58394b0207/conda-channel -c conda-forge hid-access-control` |
-| `hid_access_control` | crates.io | Publie et verifie | `cargo add hid-access-control@1.0.0` |
-| `hid_access_control` | npm | Pas encore disponible / validation en cours | Commande prevue apres publication : `npm install hid-access-control@1.0.0` |
-| `io.github.titancsa:hid-access-control` | Maven Central | Publie et verifie | `io.github.titancsa:hid-access-control:1.0.0 (pom.xml / Gradle)` |
-| `com.github.titanfyre:HID-Access-Control` | JitPack | Publie et verifie | `com.github.titanfyre:HID-Access-Control:java-sdk-v1.0.0 (avec le depot JitPack)` |
-| `github.com/titanfyre/HID-Access-Control/HID-Access-Control-Go-modules` | Go Modules | Publie et verifie | `go get github.com/titanfyre/HID-Access-Control/HID-Access-Control-Go-modules@v1.0.0` |
-| `github.com/titanfyre/HID-Access-Control/HID-Access-Control-Go-modules` | pkg.go.dev | Publie et verifie | `Documentation : https://pkg.go.dev/github.com/titanfyre/HID-Access-Control/HID-Access-Control-Go-modules@v1.0.0` |
-| `hid_access_control` | PowerShell Gallery | Publie et verifie | `Install-Module HIDAccessControl -RequiredVersion 1.0.0 -Scope CurrentUser` |
-| `hid_access_control` | pub.dev | Pas encore disponible / validation en cours | Commande prevue apres publication : `dart pub add hid_access_control:1.0.0` |
-| `hid_access_control` | RubyGems | Publie et verifie | `gem install hid-access-control -v 1.0.0` |
-| `hid_access_control` | Packagist | Pas encore disponible / validation en cours | Commande prevue apres publication : `composer require titancsa/hid-access-control:1.0.0` |
+| Registre | Paquet | Installation / utilisation |
+| --- | --- | --- |
+| vcpkg | `hid-access-control` | `vcpkg install hid-access-control:x64-windows` |
+| Conan | `hid-access-control` | `conan install --requires=hid-access-control/0.1.0 -r titancsa --build=missing -s compiler.cppstd=17` |
+| NuGet | `HID-Access-Control.Native` | `Install-Package HID-Access-Control.Native -Version 0.1.0` |
+| NuGet | `HIDAccessControl.SDK` | `dotnet add package HIDAccessControl.SDK --version 1.0.0` |
+| PyPI | `hid_access_control` | Commande prevue apres publication : `python -m pip install hid-access-control==1.0.0` |
+| Conda | `hid-access-control` | `conda install --override-channels -c https://raw.githubusercontent.com/TitanCSA/sdk-packages/089bc73095aa8eda89bacbe10d0b9e58394b0207/conda-channel -c conda-forge hid-access-control` (canal TitanCSA) |
+| crates.io | `hid_access_control` | `cargo add hid-access-control@1.0.0` |
+| npm | `hid_access_control` | Commande prevue apres publication : `npm install hid-access-control@1.0.0` |
+| Maven Central | `io.github.titancsa:hid-access-control` | `io.github.titancsa:hid-access-control:1.0.0 (pom.xml / Gradle)` |
+| JitPack | `com.github.titanfyre:HID-Access-Control` | `com.github.titanfyre:HID-Access-Control:java-sdk-v1.0.0 (avec le depot JitPack)` |
+| Go Modules | `github.com/titanfyre/HID-Access-Control/HID-Access-Control-Go-modules` | `go get github.com/titanfyre/HID-Access-Control/HID-Access-Control-Go-modules@v1.0.0` |
+| pkg.go.dev | `github.com/titanfyre/HID-Access-Control/HID-Access-Control-Go-modules` | `Documentation : https://pkg.go.dev/github.com/titanfyre/HID-Access-Control/HID-Access-Control-Go-modules@v1.0.0` |
+| PowerShell Gallery | `hid_access_control` | `Install-Module HIDAccessControl -RequiredVersion 1.0.0 -Scope CurrentUser` |
+| pub.dev | `hid_access_control` | Commande prevue apres publication : `dart pub add hid_access_control:1.0.0` |
+| RubyGems | `hid_access_control` | `gem install hid-access-control -v 1.0.0` |
+| Packagist | `hid_access_control` | Commande prevue apres publication : `composer require titancsa/hid-access-control:1.0.0` |
 
 ## Configuration vcpkg et Conan
 
