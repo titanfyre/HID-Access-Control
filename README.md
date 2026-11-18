@@ -125,7 +125,7 @@ Les sources, licences, guides API et exemples sont regroupes dans [le depot SDK 
 | Go Modules | `github.com/titanfyre/HID-Access-Control/HID-Access-Control-Go-modules` | `go get github.com/titanfyre/HID-Access-Control/HID-Access-Control-Go-modules@v1.0.0` |
 | pkg.go.dev | `github.com/titanfyre/HID-Access-Control/HID-Access-Control-Go-modules` | `Documentation : https://pkg.go.dev/github.com/titanfyre/HID-Access-Control/HID-Access-Control-Go-modules@v1.0.0` |
 | PowerShell Gallery | `HIDAccessControl` | `Install-Module HIDAccessControl -RequiredVersion 1.0.0 -Scope CurrentUser` |
-| pub.dev | `hid_access_control` | Commande prevue apres publication : `dart pub add hid_access_control:1.0.0` |
+| pub.dev | `hid_access_control` | `dart pub add hid_access_control:1.0.0` |
 | RubyGems | `hid-access-control` | `gem install hid-access-control -v 1.0.0` |
 | Packagist | `titancsa/hid-access-control` | `composer require titancsa/hid-access-control:1.0.0` |
 
