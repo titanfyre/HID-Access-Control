@@ -127,7 +127,7 @@ Les sources, licences, guides API et exemples sont regroupes dans [le depot SDK 
 | PowerShell Gallery | `HIDAccessControl` | `Install-Module HIDAccessControl -RequiredVersion 1.0.0 -Scope CurrentUser` |
 | pub.dev | `hid_access_control` | Commande prevue apres publication : `dart pub add hid_access_control:1.0.0` |
 | RubyGems | `hid-access-control` | `gem install hid-access-control -v 1.0.0` |
-| Packagist | `titancsa/hid-access-control` | Commande prevue apres publication : `composer require titancsa/hid-access-control:1.0.0` |
+| Packagist | `titancsa/hid-access-control` | `composer require titancsa/hid-access-control:1.0.0` |
 
 Pour vcpkg et Conan, configure d abord le registre TitanCSA avec [le guide complet](https://github.com/TitanCSA/sdk-packages/tree/main/projects/HID-Access-Control/README.md). Le guide explique aussi Maven/Gradle, les prerequis et le chargement des DLL. Les pilotes/applications du produit sont installes separement. Les commandes marquees prevues ne sont pas encore disponibles.
 
