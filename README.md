@@ -1,5 +1,10 @@
 # HID Access Control - Windows HID Device Access Filter Driver and C++ SDK
 
+> [!IMPORTANT]
+> **Contact TitanCSA**
+>
+> On [Discord](https://discord.com/app), choose **Friends → Add Friend**, enter **`titancsa`** and send the project name. Ask about commercial licensing, integration or support for this project.
+
 Choose which applications can open compatible controllers, with per-device rules, a small C++ SDK and a native Windows interface. Use it to give a remapper access to a physical controller while other applications use its virtual output, or to test application/device routing.
 
 > [!IMPORTANT]
