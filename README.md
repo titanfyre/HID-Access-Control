@@ -3,7 +3,11 @@
 <!-- simple-start:start -->
 Check which apps are allowed to open a selected controller.
 
-**Start here.** Read the setup steps, then test with an app you control.
+[First steps](#first-steps) · [Develop](#sdk-and-packages) · [Maintain](https://github.com/TitanCSA/sdk-packages/blob/main/CONTRIBUTING.md)
+
+## First steps
+
+Read the setup steps, then test with an app you control.
 <!-- simple-start:end -->
 
 > [!IMPORTANT]
@@ -117,30 +121,9 @@ The public user-mode source is [MIT licensed](LICENSE); **Demo/evaluation driver
 Use only on systems you own or are authorized to administer. The software is supplied as-is under its applicable license. Users remain responsible for lawful use and applicable third-party rules; no guarantee of universal compatibility, security isolation or absence of defects is made.
 
 <!-- central-sdk-packages:start -->
-## Paquets et installation
+<a name="paquets-et-installation"></a>
 
-Les sources, licences, guides API et exemples sont regroupes dans [le depot SDK dedie](https://github.com/TitanCSA/sdk-packages/tree/main/projects/HID-Access-Control). Choisis le paquet a installer puis execute sa commande dans son dossier.
+## SDK and packages
 
-| Registre | Paquet | Installation / utilisation |
-| --- | --- | --- |
-| vcpkg | `hid-access-control` | `vcpkg install hid-access-control:x64-windows` |
-| Conan | `hid-access-control` | `conan install --requires=hid-access-control/0.1.0 -r titancsa --build=missing -s compiler.cppstd=17` |
-| NuGet | `HID-Access-Control.Native` | `Install-Package HID-Access-Control.Native -Version 0.1.0` |
-| NuGet | `HIDAccessControl.SDK` | `dotnet add package HIDAccessControl.SDK --version 1.0.0` |
-| PyPI | `hid-access-control` | Commande prevue apres publication : `python -m pip install hid-access-control==1.0.0` |
-| Conda | `hid-access-control` | `conda install --override-channels -c https://raw.githubusercontent.com/TitanCSA/sdk-packages/089bc73095aa8eda89bacbe10d0b9e58394b0207/conda-channel -c conda-forge hid-access-control` (canal TitanCSA) |
-| crates.io | `hid-access-control` | `cargo add hid-access-control@1.0.0` |
-| npm | `hid-access-control` | Commande prevue apres publication : `npm install hid-access-control@1.0.0` |
-| Maven Central | `io.github.titancsa:hid-access-control` | `io.github.titancsa:hid-access-control:1.0.0 (pom.xml / Gradle)` |
-| JitPack | `com.github.titanfyre:HID-Access-Control` | `com.github.titanfyre:HID-Access-Control:java-sdk-v1.0.0 (avec le depot JitPack)` |
-| Go Modules | `github.com/titanfyre/HID-Access-Control/HID-Access-Control-Go-modules` | `go get github.com/titanfyre/HID-Access-Control/HID-Access-Control-Go-modules@v1.0.0` |
-| pkg.go.dev | `github.com/titanfyre/HID-Access-Control/HID-Access-Control-Go-modules` | `Documentation : https://pkg.go.dev/github.com/titanfyre/HID-Access-Control/HID-Access-Control-Go-modules@v1.0.0` |
-| PowerShell Gallery | `HIDAccessControl` | `Install-Module HIDAccessControl -RequiredVersion 1.0.0 -Scope CurrentUser` |
-| pub.dev | `hid_access_control` | `dart pub add hid_access_control:1.0.0` |
-| RubyGems | `hid-access-control` | `gem install hid-access-control -v 1.0.0` |
-| Packagist | `titancsa/hid-access-control` | `composer require titancsa/hid-access-control:1.0.0` |
-
-Pour vcpkg et Conan, configure d abord le registre TitanCSA avec [le guide complet](https://github.com/TitanCSA/sdk-packages/tree/main/projects/HID-Access-Control/README.md). Le guide explique aussi Maven/Gradle, les prerequis et le chargement des DLL. Les pilotes/applications du produit sont installes separement. Les commandes marquees prevues ne sont pas encore disponibles.
-
-Les anciens imports Go et versions JitPack gardent leurs tags. Pour les anciennes archives SDK, utilise [les liens de remplacement](https://github.com/TitanCSA/sdk-packages/blob/main/release-assets/URL-MIGRATION.json).
+Choose a language in the [SDK and package guide](https://github.com/TitanCSA/sdk-packages/tree/main/projects/HID-Access-Control#readme) for exact install commands and examples. If your example requires a driver or app, install it separately.
 <!-- central-sdk-packages:end -->
