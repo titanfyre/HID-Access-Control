@@ -1,5 +1,11 @@
 # HID Access Control - Windows HID Device Access Filter Driver and C++ SDK
 
+<!-- simple-start:start -->
+Check which apps are allowed to open a selected controller.
+
+**Start here.** Read the setup steps, then test with an app you control.
+<!-- simple-start:end -->
+
 > [!IMPORTANT]
 > **Contact TitanCSA**
 >
